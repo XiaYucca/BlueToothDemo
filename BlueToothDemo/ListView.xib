@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Df8-Ph-EiX" customClass="ListView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biw-aP-bUe">
+                    <rect key="frame" x="47" y="179" width="281" height="309"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-6O-sbH">
+                            <rect key="frame" x="12" y="57" width="257" height="196"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="Df8-Ph-EiX" id="ueG-1F-5OG"/>
+                                <outlet property="delegate" destination="Df8-Ph-EiX" id="gHM-cV-6pO"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="搜索到的设备" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-By-EEb">
+                            <rect key="frame" x="0.0" y="28" width="281" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7t-nZ-fCY">
+                            <rect key="frame" x="35" y="279" width="97" height="30"/>
+                            <state key="normal" title="连接设备"/>
+                            <connections>
+                                <action selector="connectButton:" destination="Df8-Ph-EiX" eventType="touchUpInside" id="Qgm-sY-Xn1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McU-dY-864">
+                            <rect key="frame" x="176" y="279" width="74" height="30"/>
+                            <state key="normal" title="连接全部"/>
+                            <connections>
+                                <action selector="connectAllButton:" destination="Df8-Ph-EiX" eventType="touchUpInside" id="OeA-4N-9Ln"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZT-UV-eZC">
+                            <rect key="frame" x="247" y="4" width="22" height="22"/>
+                            <connections>
+                                <action selector="cansaleButton:" destination="Df8-Ph-EiX" eventType="touchUpInside" id="ikH-cy-2Yw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="TableView" destination="ed6-6O-sbH" id="tMr-r1-TmT"/>
+                <outlet property="cansaleButton" destination="UZT-UV-eZC" id="2gJ-cz-8Dr"/>
+                <outlet property="connectAllButton" destination="McU-dY-864" id="by1-xA-AEd"/>
+                <outlet property="connectButton" destination="G7t-nZ-fCY" id="6hW-wR-9WO"/>
+            </connections>
+            <point key="canvasLocation" x="315.5" y="221.5"/>
+        </view>
+    </objects>
+</document>
